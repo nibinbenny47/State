@@ -19,7 +19,7 @@
         <tr>
             <td class="auto-style2">
                 <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" Text="Save" />
-                <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel" />
+                <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
         </div>
     </form>
 </body>

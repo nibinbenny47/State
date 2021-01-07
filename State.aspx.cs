@@ -27,5 +27,11 @@ public partial class District : System.Web.UI.Page
         cmd.CommandType = CommandType.StoredProcedure;
         cmd.Parameters.Add("@statename", SqlDbType.VarChar).Value = txtName.Text;
         cmd.ExecuteNonQuery();
+        cancel();
+    }
+    public void cancel()
+    {
+        txtName.Text = "";
+
     }
 }
