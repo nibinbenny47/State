@@ -20,6 +20,18 @@
             <td class="auto-style2">
                 <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" Text="Save" />
                 <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+                 <asp:GridView ID="grdDetails" runat="server" AutoGenerateColumns="False" OnRowCommand="grdDetails_RowCommand">
+                    <Columns>
+                        <asp:BoundField DataField="state_ID" HeaderText="ID" />
+                        <asp:BoundField DataField="state_name" HeaderText="Name" />
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:Button ID="Button1" runat="server" CommandArgument='<%# Eval("state_id") %>' CommandName="del" Text="Delete" />
+                                <asp:Button ID="Button2" runat="server" CommandArgument='<%# Eval("state_id") %>' CommandName="ed" Text="Edit" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
         </div>
     </form>
 </body>
