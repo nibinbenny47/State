@@ -34,4 +34,15 @@ public partial class District : System.Web.UI.Page
         txtName.Text = "";
 
     }
+    protected void fillDetails()
+    {
+        string selQry = "select * from tbl_state";
+        SqlDataAdapter adp = new SqlDataAdapter(selQry, con);
+
+        DataTable dt = new DataTable();
+        adp.Fill(dt);
+        grdDetails.DataSource = dt;
+        grdDetails.DataBind();
+
+    }
 }
