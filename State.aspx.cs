@@ -52,14 +52,14 @@ public partial class District : System.Web.UI.Page
         id = Convert.ToInt32(e.CommandArgument.ToString());
 
 
-        //if (e.CommandName == "del")
-        //{
+        if (e.CommandName == "del")
+        {
 
-        //    SqlCommand cmd = new SqlCommand("deleteState", con);
-        //    cmd.CommandType = CommandType.StoredProcedure;
-        //    cmd.Parameters.Add("@stateid", SqlDbType.VarChar).Value = id;
-        //    cmd.Parameters.Add("@statename", SqlDbType.VarChar).Value = txtName.Text;
-        //    cmd.ExecuteNonQuery();
+            SqlCommand cmd = new SqlCommand("deleteState", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@stateid", SqlDbType.VarChar).Value = id;
+            cmd.Parameters.Add("@statename", SqlDbType.VarChar).Value = txtName.Text;
+            cmd.ExecuteNonQuery();
 
             //stored procedure used above
             //string delQry = "delete from tbl_state where state_id='" + id + "'";
@@ -68,9 +68,9 @@ public partial class District : System.Web.UI.Page
 
 
 
-        //    fillDetails();
+            fillDetails();
 
-        //}
+        }
 
         if (e.CommandName == "ed")
         {
