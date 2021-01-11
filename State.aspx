@@ -16,6 +16,9 @@
                 <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
             </td>
         </tr>
+                <tr>
+                    <td>Image:<asp:FileUpload  ID="fileImage" runat="server"/></td>
+                </tr>
         <tr>
             <td class="auto-style2">
                 <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" Text="Save" />
